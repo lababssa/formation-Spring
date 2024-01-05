@@ -37,6 +37,7 @@ public class PatientController {
 	 Patient saveOrUpDatePatient(Patient patient ,@PathVariable Long id) {
 		
 		return this.patientRepository.findById(id).map(p->{
+			// hello
 			p.setNom(patient.getNom());
 			p.setPrenom(patient.getPrenom());
 			return patientRepository.save(patient);
